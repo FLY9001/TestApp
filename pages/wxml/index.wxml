@@ -1,0 +1,49 @@
+<!-- 各组件及其属性: https://developers.weixin.qq.com/miniprogram/dev/component/ -->
+
+<!--pages/wxml/index.wxml-->
+
+<!-- 数据绑定 -->
+<view>{{msg}}</view>
+<view>
+  <text>当前时间：{{time}}</text>
+</view>
+<view>
+  <!-- 属性值的绑定 -->
+  <text data-test="{{test}}"> hello world</text>
+</view>
+
+<!-- 逻辑语法， {{ 变量名 }}  -->
+<view>
+  <!-- 进行简单的逻辑运算，三元运算 -->
+  <text>{{ a === 10? "变量 a 等于10": "变量 a 不等于10"}}</text>
+</view>
+<view>
+  <!-- 算数运算 -->
+  {{1 + 2}} + {{3}} + d
+</view>
+<view>
+  <!-- 字符串的拼接 -->
+  {{"hello " + name}}
+</view>
+<view>
+  <!-- 直接放置数字、字符串或者是数组 -->
+  <text>{{[1,2,3]}}</text>
+</view>
+
+<!-- 条件逻辑 -->
+<!-- WXML 中，使用 wx:if="{{condition}}" 来判断是否需要渲染该代码块： -->
+<view wx:if="{{condition}}"> True </view>
+<!-- 使用 wx:elif 和 wx:else 来添加一个 else 块： -->
+<view wx:if="{{length > 5}}"> 1 </view>
+<view wx:elif="{{length > 2}}"> 2 </view>
+<view wx:else> 3 </view>
+<!-- 因为 wx:if 是一个控制属性，需要将它添加到一个标签上。如果要一次性判断多个组件标签，可以使用一个 标签将多个组件包装起来，并在上边使用 wx:if 控制属性。 -->
+<block wx:if="{{true}}">
+  <view> view1 </view>
+  <view> view2 </view>
+</block>
+
+<!-- array 是一个数组 -->
+<view wx:for="{{array}}">
+  {{index}}: {{item.message}}
+</view>

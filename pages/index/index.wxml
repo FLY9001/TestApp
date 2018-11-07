@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<!-- 事件，key以bind或者catch开头，中间可加冒号点击为bind:tap -->
+<!-- value是js中对应的响应事件函数 -->
+<!-- capture-bind代表事件捕获阶段，bind代表冒泡阶段 -->
+<!-- capture-catch可阻止事件往下捕获和冒泡，用于事件冲突处理 -->
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bind:tap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
