@@ -1,3 +1,5 @@
+//教程：https://developers.weixin.qq.com/ebook?action=get_post_info&token=935589521&volumn=1&lang=zh_CN&book=miniprogram&docid=0008aeea9a8978ab0086a685851c0a
+
 //app.js
 App({
   //生命周期，初始化完成时，options为打开场景参数

@@ -1,9 +1,17 @@
 <!-- 各组件及其属性: https://developers.weixin.qq.com/miniprogram/dev/component/ -->
+<!-- 组件库辅助：https://youzan.github.io/vant-weapp/#/intro -->
 
 <!--pages/wxml/index.wxml-->
-
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>
 <!-- 数据绑定 -->
-<view>{{msg}}</view>
+<view class='container'>{{msg}}</view>
 <view>
   <text>当前时间：{{time}}</text>
 </view>

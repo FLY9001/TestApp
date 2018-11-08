@@ -1,8 +1,9 @@
 {
-  "js": "逻辑",
   "jison": "配置",
+  "js": "逻辑",
   "wxml": "结构，WeiXin Markup Language",
   "wxss": "样式，WeiXin Style Sheets",
+
   "pages字段": "页面路径，第一项默认为首页",
   "window字段": "页面的顶部背景颜色，文字颜色定义等。",
   "pages": [
@@ -15,5 +16,10 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "标题",
     "navigationBarTextStyle": "black"
-  }
+  },
+
+    "usingComponents": {
+      "van-field": "/dist/field/index"
+    }
+  
 }
